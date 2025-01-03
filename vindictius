@@ -1,0 +1,343 @@
+<html><head><base href="https://amazondeals.shop"><title>AmazonDeals.shop - Top Rated Daily Discounts by Category</title><style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; color: #333; }
+header { background-color: #131921; color: white; padding: 20px 0; text-align: center; }
+h1 { margin: 0; font-size: 2.5em; }
+.subtitle { font-size: 1.2em; margin-top: 10px; color: #ffd814; }
+nav { background-color: #232f3e; padding: 10px 0; }
+.menu-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; align-items: center; }
+.menu-item { color: white; text-decoration: none; padding: 10px; position: relative; }
+.menu-item:hover { background-color: #131921; }
+.submenu { display: none; position: absolute; top: 100%; left: 0; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 1000; min-width: 200px; }
+.menu-item:hover .submenu { display: block; }
+.submenu a { display: block; padding: 10px; color: #333; text-decoration: none; }
+.submenu a:hover { background-color: #f0f0f0; }
+main { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.category-section { margin-bottom: 40px; }
+.category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.category-title { font-size: 1.8em; color: #131921; }
+.view-all { background-color: #131921; color: white; text-decoration: none; padding: 10px 20px; border-radius: 20px; transition: background-color 0.3s; }
+.view-all:hover { background-color: #232F3E; }
+.product-carousel { position: relative; overflow: hidden; padding: 20px 0; }
+.carousel-container { display: flex; gap: 20px; transition: transform 0.3s ease; }
+.product { flex: 0 0 calc(25% - 15px); background-color: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; }
+.product img { width: 100%; height: 180px; object-fit: cover; }
+.product-info { padding: 15px; }
+.product h3 { font-size: 1em; margin: 0 0 10px; height: 2.4em; overflow: hidden; }
+.price { font-size: 1.2em; font-weight: bold; color: #B12704; }
+.discount { background-color: #B12704; color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.8em; margin-left: 10px; }
+.rating { color: #FFA41C; margin: 10px 0; font-size: 0.9em; }
+.buy-now { background-color: #FFD814; border: none; border-radius: 20px; color: #0F1111; cursor: pointer; font-size: 0.9em; padding: 8px 15px; text-align: center; text-decoration: none; display: block; margin-top: 15px; transition: background-color 0.3s; }
+.buy-now:hover { background-color: #F7CA00; }
+.carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255,255,255,0.7); border: none; font-size: 2em; padding: 10px; cursor: pointer; z-index: 10; }
+.carousel-button:hover { background-color: rgba(255,255,255,0.9); }
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+footer { background-color: #232F3E; color: #DDD; text-align: center; padding: 20px; margin-top: 40px; }
+footer a { color: #FFA41C; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+#page-content { display: none; }
+.home-button { background-color: #FFD814; color: #0F1111; text-decoration: none; padding: 10px 20px; border-radius: 20px; transition: background-color 0.3s; }
+.home-button:hover { background-color: #F7CA00; }
+</style></head><body>
+<header>
+    <h1>AmazonDeals.shop</h1>
+    <p class="subtitle">Top Rated Daily Discounts by Category</p>
+</header>
+<nav>
+    <div class="menu-container">
+        <a href="#" class="home-button">Home</a>
+        <a href="#" class="menu-item" data-category="electronics">Electronics
+            <div class="submenu">
+                <a href="#" data-subcategory="smartphones">Smartphones</a>
+                <a href="#" data-subcategory="laptops">Laptops</a>
+                <a href="#" data-subcategory="audio">Audio</a>
+                <a href="#" data-subcategory="tvs">TVs</a>
+            </div>
+        </a>
+        <a href="#" class="menu-item" data-category="home-kitchen">Home & Kitchen
+            <div class="submenu">
+                <a href="#" data-subcategory="appliances">Appliances</a>
+                <a href="#" data-subcategory="furniture">Furniture</a>
+                <a href="#" data-subcategory="kitchenware">Kitchenware</a>
+                <a href="#" data-subcategory="decor">Home Decor</a>
+            </div>
+        </a>
+        <a href="#" class="menu-item" data-category="fashion">Fashion
+            <div class="submenu">
+                <a href="#" data-subcategory="womens">Women's</a>
+                <a href="#" data-subcategory="mens">Men's</a>
+                <a href="#" data-subcategory="kids">Kids</a>
+                <a href="#" data-subcategory="accessories">Accessories</a>
+            </div>
+        </a>
+        <a href="#" class="menu-item" data-category="books">Books
+            <div class="submenu">
+                <a href="#" data-subcategory="fiction">Fiction</a>
+                <a href="#" data-subcategory="non-fiction">Non-Fiction</a>
+                <a href="#" data-subcategory="childrens">Children's</a>
+                <a href="#" data-subcategory="textbooks">Textbooks</a>
+            </div>
+        </a>
+        <a href="#" class="menu-item" data-category="sports-outdoors">Sports & Outdoors
+            <div class="submenu">
+                <a href="#" data-subcategory="fitness">Fitness</a>
+                <a href="#" data-subcategory="camping">Camping</a>
+                <a href="#" data-subcategory="team-sports">Team Sports</a>
+                <a href="#" data-subcategory="cycling">Cycling</a>
+            </div>
+        </a>
+    </div>
+</nav>
+<main id="main-content">
+    <section class="category-section" id="electronics">
+        <div class="category-header">
+            <h2 class="category-title">Electronics</h2>
+            <a href="#" class="view-all" data-category="electronics">View All</a>
+        </div>
+        <div class="product-carousel">
+            <button class="carousel-button prev">‹</button>
+            <div class="carousel-container">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_SL1500_.jpg" alt="Apple AirPods Pro (2nd Generation)" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Apple AirPods Pro (2nd Generation)</h3>
+                        <p class="rating">★★★★½ (42,891)</p>
+                        <p class="price">$199.99 <span class="discount">20% OFF</span></p>
+                        <a href="https://www.amazon.com/Apple-Generation-Cancelling-Transparency-Personalized/dp/B0BDHWDR12?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/81RK+-UrNyL._AC_SL1500_.jpg" alt="Samsung 55" QLED 4K Smart TV" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Samsung 55" QLED 4K Smart TV</h3>
+                        <p class="rating">★★★★★ (15,678)</p>
+                        <p class="price">$799.99 <span class="discount">30% OFF</span></p>
+                        <a href="https://www.amazon.com/SAMSUNG-55-Inch-Class-Q70A-QN55Q70AAFXZA/dp/B08VXYTNQ6?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg" alt="Sony WH-1000XM4 Wireless Headphones" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Sony WH-1000XM4 Wireless Headphones</h3>
+                        <p class="rating">★★★★½ (31,245)</p>
+                        <p class="price">$278.00 <span class="discount">25% OFF</span></p>
+                        <a href="https://www.amazon.com/Sony-WH-1000XM4-Canceling-Headphones-phone-call/dp/B0863TXGM3?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/61XZQXFQeVL._AC_SL1500_.jpg" alt="Apple iPad Air (5th Generation)" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Apple iPad Air (5th Generation)</h3>
+                        <p class="rating">★★★★★ (8,923)</p>
+                        <p class="price">$559.00 <span class="discount">15% OFF</span></p>
+                        <a href="https://www.amazon.com/2022-Apple-iPad-10-9-inch-Wi-Fi/dp/B09V3HN1KC?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next">›</button>
+        </div>
+    </section>
+
+    <section class="category-section" id="home-kitchen">
+        <div class="category-header">
+            <h2 class="category-title">Home & Kitchen</h2>
+            <a href="#" class="view-all" data-category="home-kitchen">View All</a>
+        </div>
+        <div class="product-carousel">
+            <button class="carousel-button prev">‹</button>
+            <div class="carousel-container">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71WtwEvYDOS._AC_SL1500_.jpg" alt="Instant Pot Duo 7-in-1 Electric Pressure Cooker" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Instant Pot Duo 7-in-1 Electric Pressure Cooker</h3>
+                        <p class="rating">★★★★½ (185,679)</p>
+                        <p class="price">$79.99 <span class="discount">20% OFF</span></p>
+                        <a href="https://www.amazon.com/Instant-Pot-Multi-Use-Programmable-Pressure/dp/B00FLYWNYQ?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71+8uTMDRFL._AC_SL1500_.jpg" alt="Ninja AF101 Air Fryer, 4 Qt" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Ninja AF101 Air Fryer, 4 Qt</h3>
+                        <p class="rating">★★★★½ (35,627)</p>
+                        <p class="price">$89.99 <span class="discount">31% OFF</span></p>
+                        <a href="https://www.amazon.com/Ninja-AF101-Fryer-Black-gray/dp/B07FDJMC9Q?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/61+hQQf-l2L._AC_SL1500_.jpg" alt="Dyson V8 Cordless Vacuum Cleaner" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Dyson V8 Cordless Vacuum Cleaner</h3>
+                        <p class="rating">★★★★ (12,456)</p>
+                        <p class="price">$329.99 <span class="discount">18% OFF</span></p>
+                        <a href="https://www.amazon.com/Dyson-Animal-Cordless-Vacuum-Cleaner/dp/B0798FVV6V?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71WrKXpTAJL._AC_SL1500_.jpg" alt="Vitamix 5200 Blender Professional-Grade" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Vitamix 5200 Blender Professional-Grade</h3>
+                        <p class="rating">★★★★½ (9,876)</p>
+                        <p class="price">$399.95 <span class="discount">22% OFF</span></p>
+                        <a href="https://www.amazon.com/Vitamix-Professional-Grade-Container-Professional-Grade/dp/B008H4SLV6?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next">›</button>
+        </div>
+    </section>
+
+    <section class="category-section" id="fashion">
+        <div class="category-header">
+            <h2 class="category-title">Fashion</h2>
+            <a href="#" class="view-all" data-category="fashion">View All</a>
+        </div>
+        <div class="product-carousel">
+            <button class="carousel-button prev">‹</button>
+            <div class="carousel-container">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71lS6dLe7sL._AC_UY575_.jpg" alt="Adidas Ultraboost 21 Running Shoes" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Adidas Ultraboost 21 Running Shoes</h3>
+                        <p class="rating">★★★★½ (8,765)</p>
+                        <p class="price">$129.99 <span class="discount">35% OFF</span></p>
+                        <a href="https://www.amazon.com/adidas-Ultraboost-Running-Black-White/dp/B08KWNJ8BJ?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/91L4zjn8NHL._AC_UY741_.jpg" alt="Levi's 501 Original Fit Jeans" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Levi's 501 Original Fit Jeans</h3>
+                        <p class="rating">★★★★ (23,456)</p>
+                        <p class="price">$49.99 <span class="discount">28% OFF</span></p>
+                        <a href="https://www.amazon.com/Levis-Original-Fit-Jeans-Medium/dp/B0018OMZV8?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71HAovbX2yL._AC_UY741_.jpg" alt="Michael Kors Jet Set Travel Tote" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Michael Kors Jet Set Travel Tote</h3>
+                        <p class="rating">★★★★½ (5,678)</p>
+                        <p class="price">$149.99 <span class="discount">40% OFF</span></p>
+                        <a href="https://www.amazon.com/Michael-Kors-Travel-Saffiano-Leather/dp/B00NBPX41S?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71qNX0wixBL._AC_UY741_.jpg" alt="Fossil Gen 5 Smartwatch" width="250" height="180">
+                    <div class="product-info">
+                        <h3>Fossil Gen 5 Smartwatch</h3>
+                        <p class="rating">★★★★ (3,987)</p>
+                        <p class="price">$199.00 <span class="discount">33% OFF</span></p>
+                        <a href="https://www.amazon.com/Fossil-Touchscreen-Smartwatch-Stainless-FTW4024/dp/B07SW1KK2L?tag=asduk-20" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next">›</button>
+        </div>
+    </section>
+</main>
+<div id="page-content"></div>
+<footer>
+    <p>© 2023 AmazonDeals.shop | <a href="#" data-page="about">About Us</a> | <a href="#" data-page="privacy">Privacy Policy</a> | <a href="#" data-page="terms">Terms of Service</a></p>
+    <p><small>AmazonDeals.shop is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</small></p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    setupCarousels();
+    setupNavigation();
+});
+
+function setupCarousels() {
+    document.querySelectorAll('.product-carousel').forEach(carousel => {
+        const container = carousel.querySelector('.carousel-container');
+        const prevBtn = carousel.querySelector('.carousel-button.prev');
+        const nextBtn = carousel.querySelector('.carousel-button.next');
+        const productWidth = 280; // 250px width + 30px margin
+        let position = 0;
+
+        function slide(direction) {
+            position += direction * productWidth;
+            const maxPosition = -(container.children.length - 4) * productWidth;
+            if (position > 0) position = maxPosition;
+            if (position < maxPosition) position = 0;
+            container.style.transform = `translateX(${position}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => slide(1));
+        nextBtn.addEventListener('click', () => slide(-1));
+    });
+}
+
+function setupNavigation() {
+    document.querySelector('.home-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('main-content').style.display = 'block';
+        document.getElementById('page-content').style.display = 'none';
+    });
+
+    document.querySelectorAll('.view-all, .menu-item, .submenu a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = e.target.getAttribute('data-category');
+            const subcategory = e.target.getAttribute('data-subcategory');
+            
+            if (category) {
+                loadCategoryPage(category, subcategory);
+            }
+        });
+    });
+}
+
+function loadCategoryPage(category, subcategory) {
+    const pageContent = document.getElementById('page-content');
+    document.getElementById('main-content').style.display = 'none';
+    pageContent.style.display = 'block';
+
+    // This is where you would typically fetch data from a server
+    // For this example, we'll use the existing product data
+    const products = productData[category];
+    
+    pageContent.innerHTML = `
+        <h2>${category.replace('-', ' & ').split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} ${subcategory ? '- ' + subcategory.charAt(0).toUpperCase() + subcategory.slice(1) : ''}</h2>
+        <div class="product-grid">
+            <div class="grid-container">
+                ${products.map(createProductElement).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function createProductElement(product) {
+    return `
+        <div class="product">
+            <img src="${product.image}" alt="${product.name}" width="250" height="180">
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p class="rating">★★★★★ (${product.reviews.toLocaleString()})</p>
+                <p class="price">$${product.price.toFixed(2)} <span class="discount">${product.discount}% OFF</span></p>
+                <a href="${product.link}" class="buy-now">Buy Now</a>
+            </div>
+        </div>
+    `;
+}
+
+const productData = {
+    electronics: [
+        { name: "Apple AirPods Pro (2nd Generation)", rating: 4.5, reviews: 42891, price: 199.99, discount: 20, image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_SL1500_.jpg", link: "https://www.amazon.com/Apple-Generation-Cancelling-Transparency-Personalized/dp/B0BDHWDR12?tag=asduk-20" },
+        { name: "Samsung 55\" QLED 4K Smart TV", rating: 5, reviews: 15678, price: 799.99, discount: 30, image: "https://m.media-amazon.com/images/I/81RK+-UrNyL._AC_SL1500_.jpg", link: "https://www.amazon.com/SAMSUNG-55-Inch-Class-Q70A-QN55Q70AAFXZA/dp/B08VXYTNQ6?tag=asduk-20" },
+        { name: "Sony WH-1000XM4 Wireless Headphones", rating: 4.5, reviews: 31245, price: 278.00, discount: 25, image: "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg", link: "https://www.amazon.com/Sony-WH-1000XM4-Canceling-Headphones-phone-call/dp/B0863TXGM3?tag=asduk-20" },
+        { name: "Apple iPad Air (5th Generation)", rating: 5, reviews: 8923, price: 559.00, discount: 15, image: "https://m.media-amazon.com/images/I/61XZQXFQeVL._AC_SL1500_.jpg", link: "https://www.amazon.com/2022-Apple-iPad-10-9-inch-Wi-Fi/dp/B09V3HN1KC?tag=asduk-20" },
+        { name: "LG OLED C1 Series 65\" 4K Smart TV", rating: 4.5, reviews: 12345, price: 1796.99, discount: 10, image: "https://m.media-amazon.com/images/I/A1TyE579QcL._AC_SL1500_.jpg", link: "https://www.amazon.com/LG-OLED65C1PUB-Alexa-Built-Smart/dp/B08WFV7L3N?tag=asduk-20" },
+        { name: "Bose QuietComfort 45 Headphones", rating: 4.5, reviews: 9876, price: 329.00, discount: 12, image: "https://m.media-amazon.com/images/I/51JbsHSktkL._AC_SL1500_.jpg", link: "https://www.amazon.com/Bose-QuietComfort-Wireless-Bluetooth-Headphones/dp/B098FKXT8L?tag=asduk-20" },
+        { name: "Nintendo Switch OLED Model", rating: 5, reviews: 23456, price: 349.99, discount: 5, image: "https://m.media-amazon.com/images/I/51yJ+OqktYL._AC_SL1280_.jpg", link: "https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RL6SBJ?tag=asduk-20" },
+        { name: "Canon EOS R6 Full-Frame Mirrorless Camera", rating: 4.5, reviews: 3456, price: 2499.00, discount: 8, image: "https://m.media-amazon.com/images/I/81MYHaEUTHL._AC_SL1500_.jpg", link: "https://www.amazon.com/Canon-Full-Frame-Mirrorless-Camera-Body/dp/B08BVT9CK2?tag=asduk-20" }
+    ],
+    "home-kitchen": [
+        { name: "Instant Pot Duo 7-in-1 Electric Pressure Cooker", rating: 4.5, reviews: 185679, price: 79.99, discount: 20, image: "https://m.media-amazon.com/images/I/71WtwEvYDOS._AC_SL1500_.jpg", link: "https://www.amazon.com/Instant-Pot-Multi-Use-Programmable-Pressure/dp/B00FLYWNYQ?tag=asduk-20" },
+        { name: "Ninja AF101 Air Fryer, 4 Qt", rating: 4.5, reviews: 35627, price: 89.99, discount: 31, image: "https://m.media-amazon.com/images/I/71+8uTMDRFL._AC_SL1500_.jpg", link: "https://www.amazon.com/Ninja-AF101-Fryer-Black-gray/dp/B07FDJMC9Q?tag=asduk-20" },
+        { name: "Dyson V8 Cordless Vacuum Cleaner", rating: 4, reviews: 12456, price: 329.99, discount: 18, image: "https://m.media-amazon.com/images/I/61+hQQf-l2L._AC_SL1500_.jpg", link: "https://www.amazon.com/Dyson-Animal-Cordless-Vacuum-Cleaner/dp/B0798FVV6V?tag=asduk-20" },
+        { name: "Vitamix 5200 Blender Professional-Grade", rating: 4.5, reviews: 9876, price: 399.95, discount: 22, image: "https://m.media-amazon.com/images/I/71WrKXpTAJL._AC_SL1500_.jpg", link: "https://www.amazon.com/Vitamix-Professional-Grade-Container-Professional-Grade/dp/B008H4SLV6?tag=asduk-20" },
+        { name: "KitchenAid Stand Mixer", rating: 5, reviews: 54321, price: 379.99, discount: 15, image: "https://m.media-amazon.com/images/I/71Zl4PEsYOL._AC_SL1500_.jpg", link: "https://www.amazon.com/KitchenAid-KSM150PSER-Artisan-Tilt-Head-Pouring/dp/B00005UP2P?tag=asduk-20" },
+        { name: "Cuisinart 14-Cup Food Processor", rating: 4.5, reviews: 7890, price: 229.95, discount: 25, image: "https://m.media-amazon.com/images/I/61Qi0nQWdKL._AC_SL1500_.jpg", link: "https://www.amazon.com/Cuisinart-DFP-14BCNY-Processor-Brushed-Stainless/dp/B01AXM4WV2?tag=asduk-20" },
+        { name: "Calphalon 10-Piece Pots and Pans Set", rating: 4.5, reviews: 6543, price: 199.99, discount: 30, image: "https://m.media-amazon.com/images/I/71ARgOEpCfL._AC_SL1500_.jpg", link: "https://www.amazon.com/Calphalon-Classic-Nonstick-Cookware-10-Piece/dp/B01APP1WFQ?tag=asduk-20" },
+        { name: "iRobot Roomba i7+ Robot Vacuum", rating: 4, reviews: 8765, price: 799.99, discount: 20, image: "https://m.
